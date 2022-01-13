@@ -12,6 +12,7 @@ This is Italics:
 This is blockquote:
 
 > I am typing in VSCode.
+
 ---
 This is a code block:
 ```
