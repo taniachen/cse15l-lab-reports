@@ -1,6 +1,6 @@
 # Lab 1 Report - Week 2
 * **Installing VSCode**
-![Image](https://lh3.googleusercontent.com/keep-bbsk/AGk0z-MJplNxD5h8RpBg9kKz-33Qd6O7UrHPny-yFRyyPUlYZtBZCUKeFyCUPmIA-PRv2OPABJhl6BiUBrj47p7HmJw9jXMoZaMFIZl51Eg=s1600)
+![Image](https://github.com/taniachen/cse15l-lab-reports/blob/main/img1.png)
 I installed Visal Studio Code by downloading it from Visual Studio's website and running it. This image depicts the welcome page of VSCode.
 * **Remotely Connecting**
 ![Image](https://lh3.googleusercontent.com/keep-bbsk/AGk0z-MWYqYovRpvJ4dgy5D-_whPTYjuTjnJs-37YnV8O33_XpTFlVWSyHGRD7rUiEjgf0ExKuUVbFpkIs1KGliGf-XUHes_s1fVT2upPzM=s1528)
