@@ -3,7 +3,7 @@
 ![Image](https://github.com/taniachen/cse15l-lab-reports/blob/main/img1.png?raw=true)
 I installed Visal Studio Code by downloading it from Visual Studio's website and running it. This image depicts the welcome page of VSCode.
 * **Remotely Connecting**
-![Image](https://github.com/taniachen/cse15l-lab-reports/blob/main/img2.png)
+![Image](https://raw.githubusercontent.com/taniachen/cse15l-lab-reports/main/img2.png)
 I then installed a program called Open SSH, which allows me to connect to other computers. I used VSCode's remote option to connect to a server by typing "ssh (my account here)." I answered "yes" to the connection confirmation question and entered my password.
 * **Trying Some Commands**
 ![Image](https://github.com/taniachen/cse15l-lab-reports/blob/main/img3.png)
