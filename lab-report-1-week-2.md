@@ -1,6 +1,6 @@
 # Lab 1 Report - Week 2
 * **Installing VSCode**
-![Image](https://github.com/taniachen/cse15l-lab-reports/blob/main/img1.png)
+![Image](https://github.com/taniachen/cse15l-lab-reports/blob/main/img1.png?raw=true)
 I installed Visal Studio Code by downloading it from Visual Studio's website and running it. This image depicts the welcome page of VSCode.
 * **Remotely Connecting**
 ![Image](https://github.com/taniachen/cse15l-lab-reports/blob/main/img2.png)
