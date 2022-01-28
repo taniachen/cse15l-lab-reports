@@ -11,16 +11,29 @@ I installed a program called Open SSH, which allows me to connect to other compu
 I used VSCode's remote option to connect to a server by typing   ```$ ssh cs15lwi22zz@ieng6.ucsd.edu```
 into the terminal. I answered "yes" to the connection confirmation question and entered my password.
 * **Trying Some Commands**
-![Image](https://raw.githubusercontent.com/taniachen/cse15l-lab-reports/main/img3.pngg)
+![Image](https://raw.githubusercontent.com/taniachen/cse15l-lab-reports/main/img3.png)
 Running commands on the client
 ![Image](https://raw.githubusercontent.com/taniachen/cse15l-lab-reports/main/img4.png)
 Running commands on the server
 Some commands do not work when run on the client, but work when run on the server. This is due to the fact that these commands involve directories that are only on the server.
 
     Commands ```cd``` and ```cd ~``` work on the client, while ```ls -lat```, ```ls -a```, ```cp /home/linux/ieng6/cs15lwi22/public/hello.txt ~/```, and ```cat /home/linux/ieng6/cs15lwi22/public/hello.txt``` work exclusively on the server.
-* **Moving Files with scp**
+* **Moving Files over SSH with scp**
 ![Image](https://raw.githubusercontent.com/taniachen/cse15l-lab-reports/main/img5.png)
-I moved the file "labOne.java" to the remote server. I used the OPENSSH directory and .\scp instead of scp because currently my PATH cannot reach the scp and ssh commands.
+I created a java file called WhereAmI.java, and placed this code inside it.
+    ```
+    class WhereAmI {
+    public static void main(String[] args) {
+      System.out.println(System.getProperty("os.name"));
+      System.out.println(System.getProperty("user.name"));
+      System.out.println(System.getProperty("user.home"));
+      System.out.println(System.getProperty("user.dir"));
+    }
+  }
+  ```
+I moved the file "WhereAmI.java" to the remote server using the command ```.\scp WhereAmI.java cs15lwi22afx@ieng6.ucsd.edu:~/```. I used the OPENSSH directory and .\scp instead of scp because currently my PATH system variable cannot reach the scp and ssh commands. (This has since been fixed.)
+![Image](https://raw.githubusercontent.com/taniachen/cse15l-lab-reports/main/lab1img.png)
+Running the file on the *ieng6 computer*.
 * **Setting an SSH Key**
 ![Image](https://raw.githubusercontent.com/taniachen/cse15l-lab-reports/main/img6.png)
 ![Image](https://raw.githubusercontent.com/taniachen/cse15l-lab-reports/main/img7.png)
