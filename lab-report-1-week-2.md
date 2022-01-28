@@ -2,15 +2,22 @@
 * **Installing VSCode**
 ![Image](https://raw.githubusercontent.com/taniachen/cse15l-lab-reports/main/img1.png)
 I installed Visal Studio Code by downloading it from Visual Studio's website and running it. This image depicts the welcome page of VSCode.
+
+    [Download VSCode](https://code.visualstudio.com/)
+
 * **Remotely Connecting**
 ![Image](https://raw.githubusercontent.com/taniachen/cse15l-lab-reports/main/img2.png)
-I then installed a program called Open SSH, which allows me to connect to other computers. I used VSCode's remote option to connect to a server by typing "ssh (my account here)." I answered "yes" to the connection confirmation question and entered my password.
+I installed a program called Open SSH, which allows me to connect to other computers. Then, I looked up my CSE15L course-specific account [here](https://sdacs.ucsd.edu/~icc/index.php).
+I used VSCode's remote option to connect to a server by typing   ```$ ssh cs15lwi22zz@ieng6.ucsd.edu```
+into the terminal. I answered "yes" to the connection confirmation question and entered my password.
 * **Trying Some Commands**
 ![Image](https://raw.githubusercontent.com/taniachen/cse15l-lab-reports/main/img3.pngg)
 Running commands on the client
 ![Image](https://raw.githubusercontent.com/taniachen/cse15l-lab-reports/main/img4.png)
 Running commands on the server
 Some commands do not work when run on the client, but work when run on the server. This is due to the fact that these commands involve directories that are only on the server.
+
+    Commands ```cd``` and ```cd ~``` work on the client, while ```ls -lat```, ```ls -a```, ```cp /home/linux/ieng6/cs15lwi22/public/hello.txt ~/```, and ```cat /home/linux/ieng6/cs15lwi22/public/hello.txt``` work exclusively on the server.
 * **Moving Files with scp**
 ![Image](https://raw.githubusercontent.com/taniachen/cse15l-lab-reports/main/img5.png)
 I moved the file "labOne.java" to the remote server. I used the OPENSSH directory and .\scp instead of scp because currently my PATH cannot reach the scp and ssh commands.
