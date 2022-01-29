@@ -17,7 +17,7 @@ The bug was that the test method could not access the MarkdownParse class or its
 
 * **Second Code Change**
 ![Image](https://raw.githubusercontent.com/taniachen/cse15l-lab-reports/main/lab2-ss3.png)
-The test file [testFile3.md](https://github.com/taniachen/markdown-parse/blobe71c46bda6f809a89e17bfdaec6f5b9bf2c1d223/testFile3.md) produced this symptom.
+The test file [testFile3.md](https://github.com/taniachen/markdown-parse/blob/e71c46bda6f809a89e17bfdaec6f5b9bf2c1d223/testFile3.md) produced this symptom.
 ![Image](https://raw.githubusercontent.com/taniachen/cse15l-lab-reports/main/lab2-ss5.png)
 The bug was the getLinks() method being unable to grab everything within the parantheses that kept a link inside. This was because it only grabbed the first closing parantheses that occurred after an opening parantheses. This tester method:
     ```
