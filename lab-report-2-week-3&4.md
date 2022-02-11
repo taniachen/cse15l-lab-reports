@@ -1,7 +1,7 @@
 # Lab 2 Report - Week 3 & 4
 * **First Code Change**
 ![Image](https://raw.githubusercontent.com/taniachen/cse15l-lab-reports/main/images/lab2-ss8.png)
-The test file [test-file.md](https://github.com/taniachen/markdown-parse/blob/e71c46bda6f809a89e17bfdaec6f5b9bf2c1d223/test-file.md) produced this symptom.
+The test file [newtestfile.md](https://github.com/taniachen/markdown-parse/blob/e71c46bda6f809a89e17bfdaec6f5b9bf2c1d223/newtestfile.md) produced this symptom.
 ![Image](https://raw.githubusercontent.com/taniachen/cse15l-lab-reports/main/images/lab2-ss9.png)
 The bug was that the code fails to account for skipped lines. This test file contains a skipped line, which resulted in the symptom seen above when the test file was used as a command line argument. The lines ```int openParen = markdown.indexOf("(", nextCloseBracket);``` and ```int closeParen = markdown.indexOf(")", openParen);``` set both variables openParen and closeParen to 0, so the line ```toReturn.add(markdown.substring(openParen + 1, closeParen));``` tries to grab a substring from 0 to -1, which results in an Index Out of Bounds Exception being thrown.
 
