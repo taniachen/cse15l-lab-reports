@@ -1,20 +1,3 @@
 # **CSE 15L - LAB TWO**
-![Image](https://okonomikitchen.com/wp-content/uploads/2021/11/ramen-pancakes-1-of-1-683x1024.jpg)
-
-This is bullets:
-* Bullets
----
-This is Italics:
-
-*Italics*
-
----
-This is blockquote:
-
-> I am typing in VSCode.
-
----
-This is a code block:
-```
-Code Block
-```
+[Lab Report 1 (Week 2)](https://taniachen.github.io/cse15l-lab-reports/lab-report-1-week-2)
+[Lab Report 2 (Weeks 3 & 4)](https://taniachen.github.io/cse15l-lab-reports/lab-report-2-week-3&4)
