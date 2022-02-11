@@ -1,6 +1,6 @@
 # Lab 2 Report - Week 3 & 4
 * **First Code Change**
-![Image](https://raw.githubusercontent.com/taniachen/cse15l-lab-reports/main/images.lab2-ss2.png)
+![Image](https://raw.githubusercontent.com/taniachen/cse15l-lab-reports/main/images/lab2-ss2.png)
 The test file [test-file.md](https://github.com/taniachen/markdown-parse/blob/e71c46bda6f809a89e17bfdaec6f5b9bf2c1d223/test-file.md) produced this symptom.
 ![Image](https://raw.githubusercontent.com/taniachen/cse15l-lab-reports/main/images/lab2-ss4.png)
 The bug was that the test method could not access the MarkdownParse class or its methods. The symptom is shown in the screenshot above - MarkdownParse could not be found; it was produced when attempting to compile using ```javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java``` after writing this tester method:
