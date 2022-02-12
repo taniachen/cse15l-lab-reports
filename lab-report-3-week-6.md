@@ -1,6 +1,6 @@
 # Lab 3 Report - Week 5
 ## Copying Directories With ```scp -r```
-***
+
 ![Image](https://raw.githubusercontent.com/taniachen/cse15l-lab-reports/main/images/lab3-ss1.png)
 The command ```scp -r . cs15lwi22@ieng6.ucsd.edu:~/markdown-parse``` copies the current directory into a new directory called markdown-parse on the remote server. The `-r` tells `scp` to copy recursively, the `.` means the current directory, and the `~/markdown-parse` creates a new folder that `scp` copies into.
 
