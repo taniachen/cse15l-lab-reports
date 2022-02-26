@@ -11,11 +11,11 @@
 **JUnit Test Code**:
 ``` 
     public void testTestOne() throws IOException{
-        Path fileName = Path.of("lab8-test1.md");
-	    String contents = Files.readString(fileName);
+        Path fileName = Path.of("lab8-test1.md")
+        String contents = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(contents);
         assertEquals(List.of("google.com", "google.com", "ucsd.edu"),links);
-}
+    }
 ```
 
 **My Implementation:**
@@ -38,8 +38,8 @@ This test did not pass for the reviewed implementation.
 **JUnit Test Code:**
 ```
     public void testTestTwo() throws IOException{
-        Path fileName = Path.of("lab8-test2.md");
-	    String contents = Files.readString(fileName);
+        Path fileName = Path.of("lab8-test2.md")
+        String contents = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(contents);
         assertEquals(List.of("a.com", "a.com(())", "example.com"),links);
     }
@@ -65,8 +65,8 @@ This test did not pass for the reviewed implementation.
 **JUnit Test Code**:
 ```
     public void testTestThree() throws IOException{
-        Path fileName = Path.of("lab8-test3.md");
-	    String contents = Files.readString(fileName);
+        Path fileName = Path.of("lab8-test3.md")
+        String contents = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(contents);
         assertEquals(List.of("https://ucsd-cse15l-w22.github.io/"),links);
     }
