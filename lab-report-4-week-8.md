@@ -9,17 +9,26 @@ Should produce: ![Image](https://raw.githubusercontent.com/taniachen/cse15l-lab-
 Links in the file: google.com, google.com, ucsd.edu
 
 Code:
-``` public void testTestOne() throws IOException{
-        Path fileName = Path.of("lab8-test1.md");
-	    String contents = Files.readString(fileName);
-        ArrayList<String> links = MarkdownParse.getLinks(contents);
-        assertEquals(List.of("google.com", "google.com", "ucsd.edu"),links);
-    }
+``` 
+public void testTestOne() throws IOException{
+    Path fileName = Path.of("lab8-test1.md");
+	String contents = Files.readString(fileName);
+    ArrayList<String> links = MarkdownParse.getLinks(contents);
+    assertEquals(List.of("google.com", "google.com", "ucsd.edu"),links);
+}
 ```
 
 **My Implementation:**
 
+Output for this test:
+![Image](https://raw.githubusercontent.com/taniachen/cse15l-lab-reports/main/images/lab4-ss4.png)
+This test did not pass for my implementation.
+
 **Reviewed Implementation:**
+
+Output for this test:
+![Image](https://raw.githubusercontent.com/taniachen/cse15l-lab-reports/main/images/lab4-ss7.png)
+This test did not pass for the reviewed implementation.
 
 ## Test Two
 Should produce: ![Image](https://raw.githubusercontent.com/taniachen/cse15l-lab-reports/main/images/lab4-ss2.png)
@@ -30,7 +39,15 @@ Code:
 
 **My Implementation:**
 
+Output for this test:
+![Image](https://raw.githubusercontent.com/taniachen/cse15l-lab-reports/main/images/lab4-ss5.png)
+This test did not pass for my implementation.
+
 **Reviewed Implementation:**
+
+Output for this test:
+![Image](https://raw.githubusercontent.com/taniachen/cse15l-lab-reports/main/images/lab4-ss8.png)
+This test did not pass for the reviewed implementation.
 
 ## Test Three
 Should produce: ![Image](https://raw.githubusercontent.com/taniachen/cse15l-lab-reports/main/images/lab4-ss3.png)
@@ -41,4 +58,12 @@ Code:
 
 **My Implementation:**
 
+Output for this test:
+![Image](https://raw.githubusercontent.com/taniachen/cse15l-lab-reports/main/images/lab4-ss6.png)
+This test did not pass for my implementation.
+
 **Reviewed Implementation:**
+
+Output for this test:
+![Image](https://raw.githubusercontent.com/taniachen/cse15l-lab-reports/main/images/lab4-ss9.png)
+This test did not pass for the reviewed implementation.
