@@ -4,17 +4,17 @@
 [The one I reviewed](https://github.com/iireneliao/markdown-parse.git)
 
 ## Test One
-Should produce: ![Image](https://raw.githubusercontent.com/taniachen/cse15l-lab-reports/main/images/lab4-ss1.png)
+**Should produce:** ![Image](https://raw.githubusercontent.com/taniachen/cse15l-lab-reports/main/images/lab4-ss1.png)
 
-Links in the file: google.com, google.com, ucsd.edu
+**Links in the file:** google.com, google.com, ucsd.edu
 
-Code:
+**JUnit Test Code**:
 ``` 
-public void testTestOne() throws IOException{
-    Path fileName = Path.of("lab8-test1.md");
-	String contents = Files.readString(fileName);
-    ArrayList<String> links = MarkdownParse.getLinks(contents);
-    assertEquals(List.of("google.com", "google.com", "ucsd.edu"),links);
+    public void testTestOne() throws IOException{
+        Path fileName = Path.of("lab8-test1.md");
+	    String contents = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(contents);
+        assertEquals(List.of("google.com", "google.com", "ucsd.edu"),links);
 }
 ```
 
@@ -31,11 +31,19 @@ Output for this test:
 This test did not pass for the reviewed implementation.
 
 ## Test Two
-Should produce: ![Image](https://raw.githubusercontent.com/taniachen/cse15l-lab-reports/main/images/lab4-ss2.png)
+**Should produce:** ![Image](https://raw.githubusercontent.com/taniachen/cse15l-lab-reports/main/images/lab4-ss2.png)
 
-Links in the file: a.com, a.com(()), example.com
+**Links in the file:** a.com, a.com(()), example.com
 
-Code:
+**JUnit Test Code:**
+```
+    public void testTestTwo() throws IOException{
+        Path fileName = Path.of("lab8-test2.md");
+	    String contents = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(contents);
+        assertEquals(List.of("a.com", "a.com(())", "example.com"),links);
+    }
+```
 
 **My Implementation:**
 
@@ -50,11 +58,19 @@ Output for this test:
 This test did not pass for the reviewed implementation.
 
 ## Test Three
-Should produce: ![Image](https://raw.githubusercontent.com/taniachen/cse15l-lab-reports/main/images/lab4-ss3.png)
+**Should produce:** ![Image](https://raw.githubusercontent.com/taniachen/cse15l-lab-reports/main/images/lab4-ss3.png)
 
-Link in the file: https://ucsd-cse15l-w22.github.io/
+**Link in the file:** https://ucsd-cse15l-w22.github.io/
 
-Code:
+**JUnit Test Code**:
+```
+    public void testTestThree() throws IOException{
+        Path fileName = Path.of("lab8-test3.md");
+	    String contents = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(contents);
+        assertEquals(List.of("https://ucsd-cse15l-w22.github.io/"),links);
+    }
+```
 
 **My Implementation:**
 
