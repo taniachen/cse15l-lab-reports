@@ -2,8 +2,10 @@
 The two tests from the 652 commonmark-spec tests that I chose are `490.md` and `495.md`. I found these two tests by running `bash script.sh` on both implementations and manually searching for differences.
 
 ![Image](https://raw.githubusercontent.com/taniachen/cse15l-lab-reports/main/images/lab5-ss1.png)
+
 The output for the provided implementation.
 ![Image](https://raw.githubusercontent.com/taniachen/cse15l-lab-reports/main/images/lab5-ss2.png)
+
 The output for my implementation.
 
 ***
@@ -15,10 +17,11 @@ The file contains contents:
 bar>)
 ```
 The provided implementation outputted `[]` for `490.md`, while my implementation outputted 
-    `
-    [<foo
-    bar>]
-    `.
+`
+[<foo
+bar>]
+`
+
 The expected/correct output is `[]`, so the provided implementation is correct.
 
 This is because my implementation of MarkdownParse.java fails to recognize that a split up "link" is no longer a link.
@@ -39,9 +42,8 @@ show code that should be fixed:
 The file contains contents:
 ```
 [link](foo(and(bar)))
-
 ```
-The provided implementation outputted `[foo(and(bar))]` for `496.md`, while my implementation outputted `[foo(and(bar]`.
+The provided implementation outputted `[foo(and(bar))]` for `495.md`, while my implementation outputted `[foo(and(bar]`.
 The expected/correct output is `[foo(and(bar))]`, so the provided implementation is correct.
 
 My implementation of MarkdownParse.java produces an incorrect output because it does not contain code that accounts for the fact that a link must have an equal number of open and closed parantheses.
