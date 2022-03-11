@@ -2,7 +2,6 @@
 The two tests from the 652 commonmark-spec tests that I chose are `490.md` and `495.md`. I found these two tests by running `bash script.sh` on both implementations and manually searching for differences.
 
 ![Image](https://raw.githubusercontent.com/taniachen/cse15l-lab-reports/main/images/lab5-ss1.png)
-
 The output for the provided implementation.
 ![Image](https://raw.githubusercontent.com/taniachen/cse15l-lab-reports/main/images/lab5-ss2.png)
 
@@ -16,11 +15,11 @@ The file contains contents:
 [link](<foo
 bar>)
 ```
-The provided implementation outputted `[]` for `490.md`, while my implementation outputted 
-`
+The provided implementation outputted `[]` for `490.md`, while my implementation outputted
+```
 [<foo
 bar>]
-`
+```
 
 The expected/correct output is `[]`, so the provided implementation is correct.
 
@@ -49,12 +48,10 @@ The expected/correct output is `[foo(and(bar))]`, so the provided implementation
 My implementation of MarkdownParse.java produces an incorrect output because it does not contain code that accounts for the fact that a link must have an equal number of open and closed parantheses.
 
 ```
-if(openParen == -1){
-    return toReturn;
-}
+int closeParen = markdown.indexOf(")", openParen);
 ```
 
-My implementation only accounts for when there is no open parantheses. Instead, it needs to have something like what the provided implementation has:
+My implementation needs to have something like what the provided implementation has:
 
 ```
 static int findCloseParen(String markdown, int openParen) {
@@ -77,4 +74,4 @@ static int findCloseParen(String markdown, int openParen) {
 }
 ```
 
-This code ups the number of open parantheses everytime it finds one and decrements this number every time it finds a closed parantheses, ensuring that there is a closed parantheses for every open parantheses. If there is not, the method returns -1, indicating that it does not have a closed parantheses that ends the link.
+This code ups the number of open parantheses everytime it finds one and decrements this number every time it finds a closed parantheses, ensuring that there is a closed parantheses for every open parantheses. If there is not, the method returns -1, indicating that it does not have a closed parantheses that ends the link. If there is, then it returns the location of the final closed parantheses. Then, everything in between the correct open parantheses and the correct closed parantheses is included as part of the link.
